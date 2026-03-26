@@ -97,7 +97,7 @@ body
         display: inline-block;
         left: calc((100vw - 250px) / 2);
         bottom: 30px;
-        color: #fefefe;
+        color: #ccc;
         font-weight: 400;
         text-align: center;
     }
@@ -586,6 +586,7 @@ img:not(#box3 img)
                         color: $key-color;
                         text-decoration: none;
                         transition: all 0.2s;
+                        font-weight: 400;
 
                         &:hover
                         {
