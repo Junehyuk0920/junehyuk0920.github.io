@@ -1,0 +1,503 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard";
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  position: relative;
+  background: radial-gradient(circle at 50% 50%, #252525 0%, #151515 100%);
+}
+body::after {
+  content: "ⓒ 2026. 이준혁 All rights reserved.";
+  position: absolute;
+  width: 250px;
+  display: inline-block;
+  left: calc((100vw - 250px) / 2);
+  bottom: 30px;
+  color: #fefefe;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  font-size: 19px;
+  color: #000;
+  line-height: 30px;
+  word-break: keep-all;
+}
+
+header {
+  background: linear-gradient(to bottom, #050505, transparent);
+  height: 200px;
+  padding: 45px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+header h1, header ul {
+  height: 40px;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  transition: all 1.5s;
+}
+header ul li {
+  padding: 5px;
+}
+header ul li a {
+  color: #ddd;
+  text-underline-offset: 5px;
+  transition: all 0.2s;
+}
+header ul li a:hover {
+  color: hsl(9, 70%, 60%);
+}
+
+body > h1 {
+  font-size: 50px;
+  text-align: center;
+  animation: appear 1.5s ease 0s 1 normal forwards;
+  color: #f1f1f1;
+}
+
+body > h2 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 400;
+  color: #ddd;
+  margin-bottom: 10px;
+  animation: appear 1.5s ease 0s 1 normal forwards;
+}
+
+body > button {
+  animation: appear 1.5s ease 0s 1 normal forwards;
+  width: 200px;
+  padding: 15px 20px;
+  font-size: 20px;
+  border-radius: 7px;
+  position: absolute;
+  top: 370px;
+  border: none;
+  box-shadow: 0px 7px 10px 1px #111;
+}
+body > button#button1 {
+  left: calc((100% - 200px) / 2 - 140px);
+  background-color: #fff;
+  color: #000;
+}
+body > button#button2 {
+  right: calc((100% - 200px) / 2 - 140px);
+  background-color: hsl(9, 70%, 60%);
+  color: #fff;
+  transition: all 0.2s;
+}
+body > button#button2:hover {
+  background-color: hsl(9, 70%, 50%);
+}
+
+img:not(#box3 img) {
+  height: 110px;
+  animation: appear 2.5s ease 0s 1 normal forwards;
+  filter: drop-shadow(0px 10px 5px #111) !important;
+  position: absolute;
+}
+img:not(#box3 img)#img1 {
+  top: 560px;
+  left: 160px;
+  rotate: -4deg;
+  animation: appear 2s ease 0s 1 normal forwards;
+}
+img:not(#box3 img)#img2 {
+  top: 360px;
+  left: 70px;
+  rotate: -7deg;
+}
+img:not(#box3 img)#img3 {
+  top: 400px;
+  right: 110px;
+  rotate: 4deg;
+  animation: appear 1.5s ease 0s 1 normal forwards;
+}
+img:not(#box3 img)#img4 {
+  top: 560px;
+  right: 150px;
+  animation: appear 2s ease 0s 1 normal forwards;
+}
+img:not(#box3 img)#img5 {
+  top: 480px;
+  right: 330px;
+  rotate: 3deg;
+}
+img:not(#box3 img)#img6 {
+  height: 120px;
+  top: 534px;
+  left: 380px;
+  rotate: 7deg;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 160px;
+  margin-block: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+.carousel-container .carousel {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: max-content;
+}
+.carousel-container .carousel span {
+  margin-right: 100px;
+  font-size: 60px;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.sep {
+  text-align: center;
+  font-size: 50px;
+  animation: appear 1.5s ease 0s 1 normal forwards;
+  margin-bottom: 80px;
+  color: #f1f1f1;
+}
+
+.box {
+  height: 100vh;
+  padding: 50px 70px;
+}
+.box#box1 {
+  margin-top: 470px;
+}
+.box#box1 > div:first-of-type {
+  animation: appear 1.5s ease 0s 1 normal forwards;
+  display: flex;
+  justify-content: space-between;
+}
+.box#box1 > div:first-of-type div {
+  padding: 30px;
+  background-color: #ddd;
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 5px #111;
+}
+.box#box1 > div:first-of-type div h1 {
+  color: #000;
+  margin-bottom: 40px;
+}
+.box#box1 > div:first-of-type div ul li {
+  margin-bottom: 12px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 19px;
+  word-break: keep-all;
+}
+.box#box1 > div:first-of-type div ul li small {
+  font-family: "JetBrains Mono", monospace;
+  width: 100px;
+  color: #444;
+  text-align: right;
+}
+.box#box1 > div:last-of-type {
+  box-shadow: 0px 5px 10px 5px #111;
+  animation: appear 1.5s ease 0s 1 normal forwards;
+  padding: 30px;
+  background-color: #ddd;
+  height: 230px;
+  border-radius: 5px;
+  margin-top: 28px;
+  position: relative;
+}
+.box#box1 > div:last-of-type button {
+  background-color: hsl(9, 70%, 60%);
+  color: #fff;
+  width: 140px;
+  height: 45px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 7px;
+  border: none;
+  right: 20px;
+  bottom: 20px;
+  position: absolute;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+.box#box1 > div:last-of-type button:hover {
+  background-color: hsl(9, 70%, 50%);
+}
+.box#box3 > div {
+  background-color: #f1f1f1;
+  height: 570px;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "d1 d2" "d3 d3";
+  animation: appear 1.5s ease 0s 1 normal forwards;
+}
+.box#box3 > div div[style*="grid-area: d1"] {
+  width: 1fr;
+  background-color: #ddd;
+  padding: 30px;
+  border-radius: 7px 0px 0px 0px;
+}
+.box#box3 > div div[style*="grid-area: d1"] h1 {
+  color: #000;
+  font-size: 27px;
+  min-height: 38px;
+  max-height: 70px;
+}
+.box#box3 > div div[style*="grid-area: d1"] h1.major::before {
+  content: "★";
+  color: hsl(9, 70%, 60%);
+  margin-right: 10px;
+  font-size: 25px;
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+}
+.box#box3 > div div[style*="grid-area: d1"] img {
+  margin-top: 30px;
+  border: 1px solid #000;
+  width: 100%;
+  max-height: 350px;
+}
+.box#box3 > div div[style*="grid-area: d2"] {
+  width: 1fr;
+  padding: 30px;
+  position: relative;
+  border-radius: 0px 7px 0px 0px;
+}
+.box#box3 > div div[style*="grid-area: d2"] h1 {
+  color: #000;
+  margin-bottom: 30px;
+}
+.box#box3 > div div[style*="grid-area: d2"] p {
+  font-size: 20px;
+}
+.box#box3 > div div[style*="grid-area: d2"] a {
+  position: absolute;
+  bottom: 30px;
+  text-underline-offset: 5px;
+  transition: all 0.2s;
+}
+.box#box3 > div div[style*="grid-area: d2"] a:first-of-type {
+  right: 170px;
+  color: hsl(9, 70%, 60%);
+}
+.box#box3 > div div[style*="grid-area: d2"] a:first-of-type:hover {
+  color: hsl(9, 70%, 50%);
+}
+.box#box3 > div div[style*="grid-area: d2"] a:last-of-type {
+  right: 30px;
+  color: #000;
+}
+.box#box3 > div div[style*="grid-area: d3"] {
+  width: 1fr;
+  padding: 30px;
+  background-color: #303030;
+  position: relative;
+  border-radius: 0px 0px 7px 7px;
+}
+.box#box3 > div div[style*="grid-area: d3"] h1 {
+  color: #f1f1f1;
+}
+.box#box3 > div div[style*="grid-area: d3"] ul {
+  display: flex;
+  margin-top: 30px;
+}
+.box#box3 > div div[style*="grid-area: d3"] ul li {
+  margin-right: 30px;
+  list-style: none;
+  color: #f1f1f1;
+  transition: all 0.2s;
+}
+.box#box3 > div div[style*="grid-area: d3"] ul li::before {
+  content: "#";
+  margin-right: 7px;
+}
+.box#box3 > div div[style*="grid-area: d3"] ul li:hover {
+  color: hsl(9, 70%, 60%);
+}
+.box#box3 > div div[style*="grid-area: d3"] button {
+  position: absolute;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: #f1f1f1;
+  transition: all 0.2s;
+}
+.box#box3 > div div[style*="grid-area: d3"] button:hover {
+  color: hsl(9, 70%, 50%);
+}
+.box#box3 > div div[style*="grid-area: d3"] button:first-of-type {
+  right: 100px;
+}
+.box#box3 > div div[style*="grid-area: d3"] button:last-of-type {
+  right: 30px;
+}
+.box#box4 {
+  margin-top: 100px;
+}
+.box#box4 div {
+  animation: appear 1.5s ease 0s 1 normal forwards;
+}
+.box#box4 div ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box#box4 div ul li {
+  background-color: #f1f1f1;
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  font-size: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.box#box4 div ul li a {
+  color: hsl(9, 70%, 60%);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.box#box4 div ul li a:hover {
+  color: hsl(9, 70%, 50%);
+}
+
+.skills {
+  width: 100%;
+  animation: appear 1.5s ease 0s 1 normal forwards;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 35px;
+  justify-items: center;
+  margin-top: 50px;
+}
+.skills .skill {
+  width: 170px;
+  height: 130px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 20px;
+  border-radius: 5px;
+}
+.skills .skill.little {
+  opacity: 0.6;
+}
+.skills .skill h1 {
+  color: #111;
+  font-size: 25px;
+}
+.skills .skill h2 {
+  color: #555;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(50px);
+    filter: blur(5px) brightness(60%);
+  }
+  100% {
+    transform: translateY(0px);
+    filter: blur(0) brightness(100%);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

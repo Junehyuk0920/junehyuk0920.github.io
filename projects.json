@@ -1,0 +1,56 @@
+[
+    {
+        "name": "JH PathFinder | 각종 지원 서류 분석 및 면접 체험",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aspernatur quis possimus, natus facere dolor explicabo architecto earum nisi. Quibusdam voluptate dolorum culpa pariatur! Necessitatibus molestias inventore doloremque ducimus facere! Praesentium cupiditate fugiat laborum deleniti, omnis odit. Culpa aliquam fugiat quasi incidunt mollitia. Eaque, accusamus possimus illum quidem, eveniet culpa sequi impedit rem aperiam harum, sed nemo? Quibusdam, esse quae?",
+        "demo": "https://jh-pathfinder.vercel.app",
+        "repo": "https://github.com/Junehyuk0920/PathFinder",
+        "major": true,
+        "img": "assets/thumbnail/pathfinder.png",
+        "skills": ["HTML", "CSS", "JS", "API"]
+    },
+    {
+        "name": "JH Words (개발중)",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aspernatur quis possimus, natus facere dolor explicabo architecto earum nisi. Quibusdam voluptate dolorum culpa pariatur! Necessitatibus molestias inventore doloremque ducimus facere! Praesentium cupiditate fugiat laborum deleniti, omnis odit. Culpa aliquam fugiat quasi incidunt mollitia. Eaque, accusamus possimus illum quidem, eveniet culpa sequi impedit rem aperiam harum, sed nemo? Quibusdam, esse quae?",
+        "demo": null,
+        "repo": "https://github.com/Junehyuk0920/JH-words",
+        "major": true,
+        "img": null,
+        "skills": ["HTML", "CSS", "JS", "API"]
+    },
+    {
+        "name": "Lock",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aspernatur quis possimus, natus facere dolor explicabo architecto earum nisi. Quibusdam voluptate dolorum culpa pariatur! Necessitatibus molestias inventore doloremque ducimus facere! Praesentium cupiditate fugiat laborum deleniti, omnis odit. Culpa aliquam fugiat quasi incidunt mollitia. Eaque, accusamus possimus illum quidem, eveniet culpa sequi impedit rem aperiam harum, sed nemo? Quibusdam, esse quae?",
+        "demo": "https://junehyuk0920.github.io/lock/",
+        "repo": "https://github.com/Junehyuk0920/lock",
+        "major": true,
+        "img": null,
+        "skills": ["HTML", "CSS", "JS", "Node.js", "Arduino"]
+    },
+    {
+        "name": "JH의 개발일지",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aspernatur quis possimus, natus facere dolor explicabo architecto earum nisi. Quibusdam voluptate dolorum culpa pariatur! Necessitatibus molestias inventore doloremque ducimus facere! Praesentium cupiditate fugiat laborum deleniti, omnis odit. Culpa aliquam fugiat quasi incidunt mollitia. Eaque, accusamus possimus illum quidem, eveniet culpa sequi impedit rem aperiam harum, sed nemo? Quibusdam, esse quae?",
+        "demo": "https://junehyuk0920.github.io/blog/",
+        "repo": "https://github.com/Junehyuk0920/blog",
+        "major": false,
+        "img": "assets/thumbnail/blog.png",
+        "skills": ["HTML", "CSS", "JS", "Firebase"]
+    },
+    {
+        "name": "JH 챗봇 (카카오톡 챗봇)",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aspernatur quis possimus, natus facere dolor explicabo architecto earum nisi. Quibusdam voluptate dolorum culpa pariatur! Necessitatibus molestias inventore doloremque ducimus facere! Praesentium cupiditate fugiat laborum deleniti, omnis odit. Culpa aliquam fugiat quasi incidunt mollitia. Eaque, accusamus possimus illum quidem, eveniet culpa sequi impedit rem aperiam harum, sed nemo? Quibusdam, esse quae?",
+        "demo": "https://pf.kakao.com/_Ivxnpn/chat",
+        "repo": null,
+        "major": false,
+        "img": "assets/thumbnail/chatbot.png",
+        "skills": ["HTML", "CSS", "JS", "Python"]
+    },
+    {
+        "name": "JH Invest",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aspernatur quis possimus, natus facere dolor explicabo architecto earum nisi. Quibusdam voluptate dolorum culpa pariatur! Necessitatibus molestias inventore doloremque ducimus facere! Praesentium cupiditate fugiat laborum deleniti, omnis odit. Culpa aliquam fugiat quasi incidunt mollitia. Eaque, accusamus possimus illum quidem, eveniet culpa sequi impedit rem aperiam harum, sed nemo? Quibusdam, esse quae?",
+        "demo": "https://junehyuk0920.github.io/invest/",
+        "repo": "https://github.com/Junehyuk0920/invest",
+        "major": false,
+        "img": "assets/thumbnail/invest.png",
+        "skills": ["HTML", "CSS", "JS"]
+    }
+]
