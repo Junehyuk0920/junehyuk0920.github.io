@@ -311,8 +311,7 @@ img:not(#box3 img)#img6 {
 .box#box3 > div div[style*="grid-area: d1"] h1 {
   color: #000;
   font-size: 27px;
-  min-height: 38px;
-  max-height: 70px;
+  margin-bottom: 30px;
 }
 .box#box3 > div div[style*="grid-area: d1"] h1.major::before {
   content: "★";
@@ -324,7 +323,6 @@ img:not(#box3 img)#img6 {
   line-height: 38px;
 }
 .box#box3 > div div[style*="grid-area: d1"] img {
-  margin-top: 30px;
   border: 1px solid #000;
   width: 100%;
   max-height: 350px;

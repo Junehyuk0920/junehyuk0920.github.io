@@ -12,6 +12,14 @@ async function loadProjects()
     }
 }
 
+let vw = window.innerWidth / 100;
+
+window.addEventListener('resize', () => {
+    vw = window.innerWidth / 100;
+
+    document.querySelector("#projectDesc").innerText = projects[idx].desc.slice(0, 4*vw*vw) + (projects[idx].desc.slice(0, 4*vw*vw) ? '...' : '');
+});
+
 function setProject(idx)
 {
     if (projects[idx].major) document.querySelector("#projectName").className = "major";
