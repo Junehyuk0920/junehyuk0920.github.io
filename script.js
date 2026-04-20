@@ -50,3 +50,6 @@ async function main()
 }
 
 main();
+
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) document.querySelector("body").classList.add("isMobile");

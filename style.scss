@@ -82,12 +82,36 @@ button
 
 body
 {
+    max-width: 100%;
+    overflow-x: hidden;
+    &:not(.isMobile)
+    {
+        min-width: 600px;
+    }
     position: relative;
     background: radial-gradient(
         circle at 50% 50%,
         #252525 0%,
         #151515 100%
     );
+
+    & > h1
+    {
+        font-size: 50px;
+        text-align: center;
+        animation: appear 1.5s ease 0s 1 normal forwards;
+        color: #f1f1f1;
+    }
+
+    & > h2
+    {
+        font-size: 35px;
+        text-align: center;
+        font-weight: 400;
+        color: #ddd;
+        margin-bottom: 10px;
+        animation: appear 1.5s ease 0s 1 normal forwards;
+    }
 
     &::after
     {
@@ -118,6 +142,7 @@ header
     padding: 45px 60px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     h1 a
     {
@@ -141,6 +166,8 @@ header
         li
         {
             padding: 5px;
+            list-style: none;
+
             a
             {
                 color: #ddd;
@@ -156,67 +183,59 @@ header
     }
 }
 
-body > h1
+.buttons
 {
-    font-size: 50px;
-    text-align: center;
-    animation: appear 1.5s ease 0s 1 normal forwards;
-    color: #f1f1f1;
-}
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-body > h2
-{
-    font-size: 35px;
-    text-align: center;
-    font-weight: 400;
-    color: #ddd;
-    margin-bottom: 10px;
-    animation: appear 1.5s ease 0s 1 normal forwards;
-}
-
-body > button
-{
-    animation: appear 1.5s ease 0s 1 normal forwards;
-    width: 200px;
-    padding: 15px 20px;
-    font-size: 20px;
-    border-radius: 7px;
-    position: absolute;
-    top: 370px;
-    border: none;
-    box-shadow: 0px 7px 10px 1px #111;
-    
-    &#button1
+    button
     {
-        left: calc((100% - 200px) / 2 - 140px);
-        background-color: #fff;
-        color: #000;
-    }
+        animation: appear 1.5s ease 0s 1 normal forwards;
+        width: 200px;
+        padding: 15px 20px;
+        font-size: 20px;
+        border-radius: 7px;
+        margin-top: 50px;
+        border: none;
+        box-shadow: 0px 7px 10px 1px #111;
+        margin-inline: 40px;
 
-    &#button2
-    {
-        right: calc((100% - 200px) / 2 - 140px);
-        background-color: $key-color;
-        color: #fff;
-        transition: all 0.2s;
-
-        &:hover
+        &#button1
         {
-            background-color: $active-color;
+            background-color: #fff;
+            color: #000;
+        }
+
+        &#button2
+        {
+            background-color: $key-color;
+            color: #fff;
+            transition: all 0.2s;
+
+            &:hover
+            {
+                background-color: $active-color;
+            }
         }
     }
+
+    
 }
 
 img:not(#box3 img)
 {
-    height: 110px;
+    $val: clamp(20px, calc(200px - 10vw), 300px);
+    height: 8vw;
+    min-height: 100px;
     animation: appear 2.5s ease 0s 1 normal forwards;
     filter: drop-shadow(0px 10px 5px #111) !important;
     position: absolute;
 
     &#img1
     {
-        top: 560px;
+        top: calc(560px + $val);
         left: 160px;
         rotate: -4deg;
         animation: appear 2s ease 0s 1 normal forwards;
@@ -224,14 +243,14 @@ img:not(#box3 img)
 
     &#img2
     {
-        top: 360px;
+        top: calc(360px + $val);
         left: 70px;
         rotate: -7deg;
     }
 
     &#img3
     {
-        top: 400px;
+        top: calc(400px + $val);
         right: 110px;
         rotate: 4deg;
         animation: appear 1.5s ease 0s 1 normal forwards;
@@ -239,22 +258,21 @@ img:not(#box3 img)
 
     &#img4
     {
-        top: 560px;
+        top: calc(560px + $val);
         right: 150px;
         animation: appear 2s ease 0s 1 normal forwards;
     }
 
     &#img5
     {
-        top: 480px;
+        top: calc(480px + $val);
         right: 330px;
         rotate: 3deg;
     }
 
     &#img6
     {
-        height: 120px;
-        top: 534px;
+        top: calc(534px + $val);
         left: 380px;
         rotate: 7deg;
     }
@@ -315,21 +333,38 @@ img:not(#box3 img)
     &#box1
     {
         margin-top: 470px;
+        height: calc(150vh);
     }
 
     &#box1 > div:first-of-type
     {
         animation: appear 1.5s ease 0s 1 normal forwards;
-        display: flex;
-        justify-content: space-between;
-        
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 650px;
+        justify-content: center;
+        width: 100%;
 
-        & div
+        // & div.text
+        // {
+        //     box-shadow: 0px 5px 10px 5px #111;
+        //     padding: 30px;
+        //     background-color: #ddd;
+        //     height: 500px; 
+        //     border-radius: 5px;
+        //     position: relative;
+            
+        //     p
+        //     {
+        //         letter-spacing: -0.5px;
+        //     }
+        // }
+
+        & div:not(.text)
         {
             padding: 30px;
             background-color: #ddd;
-            width: 400px;
-            height: 300px;
+            height: calc(fit-content + 100px);
             border-radius: 5px;
             box-shadow: 0px 5px 10px 5px #111;
 
@@ -359,40 +394,6 @@ img:not(#box3 img)
                         text-align: right;
                     }
                 }
-            }
-        }
-    }
-
-    &#box1 > div:last-of-type
-    {
-        box-shadow: 0px 5px 10px 5px #111;
-        animation: appear 1.5s ease 0s 1 normal forwards;
-        padding: 30px;
-        background-color: #ddd;
-        height: 230px;
-        border-radius: 5px;
-        margin-top: 28px;
-        position: relative;
-
-        button
-        {
-            background-color: $key-color;
-            color: #fff;
-            width: 140px;
-            height: 45px;
-            padding: 10px;
-            font-size: 20px;
-            border-radius: 7px;
-            border: none;
-            right: 20px;
-            bottom: 20px;
-            position: absolute;
-            font-size: 18px;
-            transition: all 0.2s;
-
-            &:hover
-            {
-                background-color: $active-color;
             }
         }
     }
@@ -580,18 +581,18 @@ img:not(#box3 img)
                     font-size: 25px;
                     border-radius: 10px;
                     margin-bottom: 20px;
+                    transition: all 0.2s;
                     
                     a
                     {
                         color: $key-color;
                         text-decoration: none;
-                        transition: all 0.2s;
                         font-weight: 400;
+                    }
 
-                        &:hover
-                        {
-                            color: $active-color;
-                        }
+                    &:hover
+                    {
+                        background-color: #e8e8e8;
                     }
                 }
             }
@@ -653,6 +654,18 @@ img:not(#box3 img)
     }
 }
 
+@keyframes fade
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
 @keyframes scroll
 {
     0%
@@ -663,4 +676,33 @@ img:not(#box3 img)
     {
         transform: translateX(-33.3%);
     }
+}
+
+@media (max-width: 1100px)
+{
+    #box1
+    {
+        margin-top: 250px !important;
+    }
+
+    body
+    {
+        & > h1
+        {
+            font-size: 40px;
+        }
+
+        & > h2
+        {
+            font-size: 26px;
+            margin-top: 100px;
+        }
+
+        &:not(.isMobile) > img
+        {
+            animation: fade 1.5s ease 0s 1 normal forwards !important;
+        }
+    }
+    
+
 }

@@ -67,8 +67,29 @@ button {
 }
 
 body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body:not(.isMobile) {
+  min-width: 600px;
+}
+body {
   position: relative;
   background: radial-gradient(circle at 50% 50%, #252525 0%, #151515 100%);
+}
+body > h1 {
+  font-size: 50px;
+  text-align: center;
+  animation: appear 1.5s ease 0s 1 normal forwards;
+  color: #f1f1f1;
+}
+body > h2 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 400;
+  color: #ddd;
+  margin-bottom: 10px;
+  animation: appear 1.5s ease 0s 1 normal forwards;
 }
 body::after {
   content: "ⓒ 2026. 이준혁 All rights reserved.";
@@ -95,6 +116,7 @@ header {
   padding: 45px 60px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 header h1 a {
   color: #f1f1f1;
@@ -112,6 +134,7 @@ header ul {
 }
 header ul li {
   padding: 5px;
+  list-style: none;
 }
 header ul li a {
   color: #ddd;
@@ -122,84 +145,72 @@ header ul li a:hover {
   color: hsl(9, 70%, 60%);
 }
 
-body > h1 {
-  font-size: 50px;
-  text-align: center;
-  animation: appear 1.5s ease 0s 1 normal forwards;
-  color: #f1f1f1;
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-body > h2 {
-  font-size: 35px;
-  text-align: center;
-  font-weight: 400;
-  color: #ddd;
-  margin-bottom: 10px;
-  animation: appear 1.5s ease 0s 1 normal forwards;
-}
-
-body > button {
+.buttons button {
   animation: appear 1.5s ease 0s 1 normal forwards;
   width: 200px;
   padding: 15px 20px;
   font-size: 20px;
   border-radius: 7px;
-  position: absolute;
-  top: 370px;
+  margin-top: 50px;
   border: none;
   box-shadow: 0px 7px 10px 1px #111;
+  margin-inline: 40px;
 }
-body > button#button1 {
-  left: calc((100% - 200px) / 2 - 140px);
+.buttons button#button1 {
   background-color: #fff;
   color: #000;
 }
-body > button#button2 {
-  right: calc((100% - 200px) / 2 - 140px);
+.buttons button#button2 {
   background-color: hsl(9, 70%, 60%);
   color: #fff;
   transition: all 0.2s;
 }
-body > button#button2:hover {
+.buttons button#button2:hover {
   background-color: hsl(9, 70%, 50%);
 }
 
 img:not(#box3 img) {
-  height: 110px;
+  height: 8vw;
+  min-height: 100px;
   animation: appear 2.5s ease 0s 1 normal forwards;
   filter: drop-shadow(0px 10px 5px #111) !important;
   position: absolute;
 }
 img:not(#box3 img)#img1 {
-  top: 560px;
+  top: calc(560px + clamp(20px, 200px - 10vw, 300px));
   left: 160px;
   rotate: -4deg;
   animation: appear 2s ease 0s 1 normal forwards;
 }
 img:not(#box3 img)#img2 {
-  top: 360px;
+  top: calc(360px + clamp(20px, 200px - 10vw, 300px));
   left: 70px;
   rotate: -7deg;
 }
 img:not(#box3 img)#img3 {
-  top: 400px;
+  top: calc(400px + clamp(20px, 200px - 10vw, 300px));
   right: 110px;
   rotate: 4deg;
   animation: appear 1.5s ease 0s 1 normal forwards;
 }
 img:not(#box3 img)#img4 {
-  top: 560px;
+  top: calc(560px + clamp(20px, 200px - 10vw, 300px));
   right: 150px;
   animation: appear 2s ease 0s 1 normal forwards;
 }
 img:not(#box3 img)#img5 {
-  top: 480px;
+  top: calc(480px + clamp(20px, 200px - 10vw, 300px));
   right: 330px;
   rotate: 3deg;
 }
 img:not(#box3 img)#img6 {
-  height: 120px;
-  top: 534px;
+  top: calc(534px + clamp(20px, 200px - 10vw, 300px));
   left: 380px;
   rotate: 7deg;
 }
@@ -245,25 +256,28 @@ img:not(#box3 img)#img6 {
 }
 .box#box1 {
   margin-top: 470px;
+  height: 150vh;
 }
 .box#box1 > div:first-of-type {
   animation: appear 1.5s ease 0s 1 normal forwards;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 650px;
+  justify-content: center;
+  width: 100%;
 }
-.box#box1 > div:first-of-type div {
+.box#box1 > div:first-of-type div:not(.text) {
   padding: 30px;
   background-color: #ddd;
-  width: 400px;
-  height: 300px;
+  height: calc(fit-content + 100px);
   border-radius: 5px;
   box-shadow: 0px 5px 10px 5px #111;
 }
-.box#box1 > div:first-of-type div h1 {
+.box#box1 > div:first-of-type div:not(.text) h1 {
   color: #000;
   margin-bottom: 40px;
 }
-.box#box1 > div:first-of-type div ul li {
+.box#box1 > div:first-of-type div:not(.text) ul li {
   margin-bottom: 12px;
   list-style: none;
   display: flex;
@@ -272,39 +286,11 @@ img:not(#box3 img)#img6 {
   font-size: 19px;
   word-break: keep-all;
 }
-.box#box1 > div:first-of-type div ul li small {
+.box#box1 > div:first-of-type div:not(.text) ul li small {
   font-family: "JetBrains Mono", monospace;
   width: 100px;
   color: #444;
   text-align: right;
-}
-.box#box1 > div:last-of-type {
-  box-shadow: 0px 5px 10px 5px #111;
-  animation: appear 1.5s ease 0s 1 normal forwards;
-  padding: 30px;
-  background-color: #ddd;
-  height: 230px;
-  border-radius: 5px;
-  margin-top: 28px;
-  position: relative;
-}
-.box#box1 > div:last-of-type button {
-  background-color: hsl(9, 70%, 60%);
-  color: #fff;
-  width: 140px;
-  height: 45px;
-  padding: 10px;
-  font-size: 20px;
-  border-radius: 7px;
-  border: none;
-  right: 20px;
-  bottom: 20px;
-  position: absolute;
-  font-size: 18px;
-  transition: all 0.2s;
-}
-.box#box1 > div:last-of-type button:hover {
-  background-color: hsl(9, 70%, 50%);
 }
 .box#box3 > div {
   background-color: #f1f1f1;
@@ -440,15 +426,15 @@ img:not(#box3 img)#img6 {
   font-size: 25px;
   border-radius: 10px;
   margin-bottom: 20px;
+  transition: all 0.2s;
 }
 .box#box4 div ul li a {
   color: hsl(9, 70%, 60%);
   text-decoration: none;
-  transition: all 0.2s;
   font-weight: 400;
 }
-.box#box4 div ul li a:hover {
-  color: hsl(9, 70%, 50%);
+.box#box4 div ul li:hover {
+  background-color: #e8e8e8;
 }
 
 .skills {
@@ -492,12 +478,35 @@ img:not(#box3 img)#img6 {
     filter: blur(0) brightness(100%);
   }
 }
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-33.3%);
+  }
+}
+@media (max-width: 1100px) {
+  #box1 {
+    margin-top: 250px !important;
+  }
+  body > h1 {
+    font-size: 40px;
+  }
+  body > h2 {
+    font-size: 26px;
+    margin-top: 100px;
+  }
+  body:not(.isMobile) > img {
+    animation: fade 1.5s ease 0s 1 normal forwards !important;
   }
 }
 
