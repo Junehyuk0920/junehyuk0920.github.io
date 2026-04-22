@@ -1,7 +1,7 @@
 [
     {
         "name": "JH PathFinder | 각종 지원 서류 분석 및 면접 체험",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aspernatur quis possimus, natus facere dolor explicabo architecto earum nisi. Quibusdam voluptate dolorum culpa pariatur! Necessitatibus molestias inventore doloremque ducimus facere! Praesentium cupiditate fugiat laborum deleniti, omnis odit. Culpa aliquam fugiat quasi incidunt mollitia. Eaque, accusamus possimus illum quidem, eveniet culpa sequi impedit rem aperiam harum, sed nemo? Quibusdam, esse quae?",
+        "desc": "취업 준비 과정에서 활용할 수 있는 AI 기반 서류 분석 및 면접 시뮬레이션 웹 서비스입니다. 사용자가 이력서, 자기소개서 등의 서류를 입력하면 OpenRouter API를 활용한 AI가 이를 분석하여 총평, 핵심 강점, 위험 요소, 전략적 제언의 4단계로 구조화된 피드백을 제공합니다. 또한 면접 체험 기능을 통해 예상 질문과 압박형 꼬리 질문을 생성하고, 이에 대한 모범 답안과 핵심 키워드를 함께 제시하여 실전 면접 대비가 가능하도록 설계했습니다.",
         "demo": "https://jh-pathfinder.vercel.app",
         "repo": "https://github.com/Junehyuk0920/PathFinder",
         "major": true,
@@ -19,7 +19,7 @@
     },
     {
         "name": "Lock",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aspernatur quis possimus, natus facere dolor explicabo architecto earum nisi. Quibusdam voluptate dolorum culpa pariatur! Necessitatibus molestias inventore doloremque ducimus facere! Praesentium cupiditate fugiat laborum deleniti, omnis odit. Culpa aliquam fugiat quasi incidunt mollitia. Eaque, accusamus possimus illum quidem, eveniet culpa sequi impedit rem aperiam harum, sed nemo? Quibusdam, esse quae?",
+        "desc": "아두이노 나노와 포텐셔미터 3개를 활용하여 조합 기반 잠금 시스템을 구현한 임베디드 프로젝트입니다. 각 포텐셔미터의 회전 각도를 아날로그 신호로 입력받아 이를 0부터 40까지의 정수 값으로 매핑하고, 세 개의 값을 조합하여 하나의 비밀번호로 사용하는 구조로 설계했습니다. 또한 시리얼 통신을 통해 아두이노와 Node.js 기반 환경을 연동하여, 하드웨어에서 발생한 데이터를 실시간으로 전송하고 웹 인터페이스에서 확인 및 제어할 수 있도록 구성했습니다. 세 개의 입력값 조합을 통해 총 40³(약 64,000)가지의 경우의 수를 가지는 조합형 잠금 시스템을 구현했으며, 센서 입력 처리부터 데이터 통신까지의 전반적인 임베디드 시스템 흐름을 직접 설계하고 구현한 것이 특징입니다.",
         "demo": "https://junehyuk0920.github.io/lock/",
         "repo": "https://github.com/Junehyuk0920/lock",
         "major": true,
@@ -28,7 +28,7 @@
     },
     {
         "name": "JH의 개발일지",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aspernatur quis possimus, natus facere dolor explicabo architecto earum nisi. Quibusdam voluptate dolorum culpa pariatur! Necessitatibus molestias inventore doloremque ducimus facere! Praesentium cupiditate fugiat laborum deleniti, omnis odit. Culpa aliquam fugiat quasi incidunt mollitia. Eaque, accusamus possimus illum quidem, eveniet culpa sequi impedit rem aperiam harum, sed nemo? Quibusdam, esse quae?",
+        "desc": "순수 HTML, CSS, JavaScript로 구현한 개발 블로그 플랫폼입니다. 외부 프레임워크 없이 정적 웹 환경에서 동작하도록 설계했으며, 블로그 글을 언어별로 분류하여 카테고리화하고 사용자에게 직관적인 탐색 구조를 제공합니다. 콘텐츠는 .txt 파일 기반으로 관리하며, 새로운 글을 작업 폴더에 추가한 후 Git을 통해 배포하는 방식으로 운영됩니다. 클라이언트에서는 비동기 fetch를 통해 .txt 파일을 불러오고, [], (), {} 등의 커스텀 문법을 정규표현식으로 분석하여 <h1>, <b> 등의 HTML 태그로 변환하는 텍스트 파싱 로직을 구현했습니다. 이를 통해 별도의 마크다운 라이브러리 없이도 구조화된 문서 렌더링이 가능하도록 설계했습니다. 또한 Firebase를 활용하여 게시글의 좋아요 수를 저장하고 관리하는 기능을 추가하여 사용자 상호작용 요소를 구현했습니다.",
         "demo": "https://junehyuk0920.github.io/blog/",
         "repo": "https://github.com/Junehyuk0920/blog",
         "major": false,

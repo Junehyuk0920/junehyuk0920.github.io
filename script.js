@@ -12,13 +12,13 @@ async function loadProjects()
     }
 }
 
-let vw = window.innerWidth / 100;
+// let vw = window.innerWidth / 100;
 
-window.addEventListener('resize', () => {
-    vw = window.innerWidth / 100;
+// window.addEventListener('resize', () => {
+//     vw = window.innerWidth / 100;
 
-    document.querySelector("#projectDesc").innerText = projects[idx].desc.slice(0, 4*vw*vw) + (projects[idx].desc.slice(0, 4*vw*vw) ? '...' : '');
-});
+//     document.querySelector("#projectDesc").innerText = projects[idx].desc.slice(0, 4*vw*vw) + (projects[idx].desc.slice(0, 4*vw*vw) ? '...' : '');
+// });
 
 function setProject(idx)
 {
@@ -60,4 +60,4 @@ async function main()
 main();
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-if (isMobile) document.querySelector("body").classList.add("isMobile");
+if (isMobile || 1) document.querySelector("body").classList.add("isMobile");

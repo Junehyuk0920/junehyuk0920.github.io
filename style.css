@@ -299,13 +299,15 @@ img:not(#box3 img)#img6 {
   height: auto !important;
   margin-bottom: 100px;
 }
+.box#box3 {
+  height: auto;
+}
 .box#box3 > div {
   background-color: #f1f1f1;
-  height: 570px;
   border-radius: 7px;
   display: grid;
   grid-template-columns: 2fr 3fr;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 450px 180px;
   grid-template-areas: "d1 d2" "d3 d3";
   animation: appear 1.5s ease 0s 1 normal forwards;
 }
@@ -412,9 +414,6 @@ img:not(#box3 img)#img6 {
 .box#box3 > div div[style*="grid-area: d3"] button:last-of-type {
   right: 30px;
 }
-.box#box4 {
-  margin-top: 100px;
-}
 .box#box4 div {
   animation: appear 1.5s ease 0s 1 normal forwards;
 }
@@ -513,6 +512,11 @@ img:not(#box3 img)#img6 {
   }
   body:not(.isMobile) > img {
     animation: fade 1.5s ease 0s 1 normal forwards !important;
+  }
+  #box3 > div {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 480px 600px 180px !important;
+    grid-template-areas: "d1" "d2" "d3" !important;
   }
 }
 
